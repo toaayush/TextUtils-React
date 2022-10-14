@@ -4,7 +4,7 @@ import './App.css';
 import Alert from './components/Alert';
 import About from './components/About';
 import Navbar from './components/Navbar';
-// import TextForm from './components/TextForm';
+import TextForm from './components/TextForm';
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,7 +29,7 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled", "success");
-      document.title = 'TextUtils - Dark Mode';
+      // document.title = 'TextUtils - Dark Mode';
       // setInterval(() => {
       //   document.title = 'TextUtils is Amazing';
       // }, 2000);
@@ -41,7 +41,7 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
-      document.title = 'TextUtils - Light Mode';
+      // document.title = 'TextUtils - Light Mode';
     }
   }
 
@@ -60,7 +60,7 @@ function App() {
             <About mode = {mode}/>
           </Route>
           <Route exact path="/">
-            <TextForm showAlert={showAlert} heading = "Enter the text to analyze below" mode = {mode}/>
+            <TextForm showAlert={showAlert} heading = "Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode = {mode}/>
           </Route>
         </Switch>
       </div>
