@@ -47,15 +47,11 @@ function App() {
 
   return (
     <>
-      {/* <Navbar title = "TextUtils" aboutText = "About TextUtils"/> */}
-      {/* <Navbar/> */}
       <Router>
       <Navbar title = "TextUtils" mode = {mode} toggleMode = {toggleMode}/>
       <Alert alert={alert}/>
       <div className="container my-3">
         <Switch>
-          {/* /users --> Component 1
-          /users/home --> Component 2 - This can render if we don't use exact for /users only*/}
           <Route exact path="/about">
             <About mode = {mode}/>
           </Route>

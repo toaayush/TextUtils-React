@@ -3,8 +3,6 @@ import React, {useState} from 'react'
 
 export default function TextForm(props) {
     const handleUpClick = ()=>{
-        // console.log("Uppercase was clicked: " + text);
-        // setText("You have clicked on handleUpClick");
         let newText = text.toUpperCase();
         setText(newText);
         props.showAlert("Converted to uppercase!", "success");
@@ -23,11 +21,10 @@ export default function TextForm(props) {
     }
     const handleOnChange = (event)=>{
         setText(event.target.value);
-        // console.log("On change");
     }
     const handleCopy = ()=>{
         var text = document.getElementById("myBox");
-        text.select(); //Optional
+        text.select();
         navigator.clipboard.writeText(text.value);
         document.getSelection().removeAllRanges();
         props.showAlert("Copied to Clipboard!", "success");
@@ -39,8 +36,6 @@ export default function TextForm(props) {
     }
     
     const [text, setText] = useState('');
-    // text = "new text"; // Wrong way to change the state
-    // setText("new text"); // Right way to change the state
   return (
     <div>
         <>
