@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
 import About from './components/About';
@@ -58,7 +57,7 @@ function App() {
           {/* /users --> Component 1
           /users/home --> Component 2 - This can render if we don't use exact for /users only*/}
           <Route exact path="/about">
-            <About/>
+            <About mode = {mode}/>
           </Route>
           <Route exact path="/">
             <TextForm showAlert={showAlert} heading = "Enter the text to analyze below" mode = {mode}/>
